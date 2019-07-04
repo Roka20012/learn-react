@@ -17,6 +17,7 @@ class GetUserRepos extends React.Component {
         let urlSearchParams = new URLSearchParams(window.location.search);
         let username = urlSearchParams.get("username");
         this.textInput.current.value = username;
+        if(username === null) return;
         if (!username || username.match(/\s+/)) {
             this.showError();
             return;
