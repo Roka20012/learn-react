@@ -17,7 +17,7 @@ class GetUserRepos extends React.Component {
         let urlSearchParams = new URLSearchParams(window.location.search);
         let username = urlSearchParams.get("username");
         this.textInput.current.value = username;
-        if(username === null) return;
+        if (username === null) return;
         if (!username || username.match(/\s+/)) {
             this.showError();
             return;
@@ -27,12 +27,14 @@ class GetUserRepos extends React.Component {
     }
 
     showError = () => {
-        this.setState({
-            repos: null,
-            username: null,
-            avatarUrl: null,
-            error: "Can't find this please enter correct name!"
-        });
+        if (!this.state.error) {
+            this.setState({
+                repos: null,
+                username: null,
+                avatarUrl: null,
+                error: "Can't find this please enter correct name!"
+            });
+        }
     };
 
     getUserName = () => {
@@ -52,12 +54,14 @@ class GetUserRepos extends React.Component {
         try {
             const URL = `https://api.github.com/users/${username}/repos`;
             let userRepos = await fetch(URL).then(respone => respone.json());
-            this.setState({
-                repos: userRepos,
-                username: username,
-                avatarUrl: userRepos[0].owner.avatar_url,
-                error: null
-            });
+            if (username !== this.state.username) {
+                this.setState({
+                    repos: userRepos,
+                    username: username,
+                    avatarUrl: userRepos[0].owner.avatar_url,
+                    error: null
+                });
+            }
         } catch (e) {
             this.showError();
         }
