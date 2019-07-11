@@ -1,80 +1,91 @@
 /* ALL */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #e7e7e7;
-    font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e7e7e7;
+  font-family: "Roboto", sans-serif;
 }
 
 /* ROOT */
 
 body > div {
-    padding: 1px;
-    width: 80%;
-    min-height: 100vh;
-    margin: 0 auto;
-    background-color: #11b57c;
+  padding: 1px;
+  width: 80%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #11b57c;
 }
 
 /* INPUT DATA */
 .get-user-repos {
-    font-family: "Montserrat", sans-serif;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    padding: 0 20px;
-    margin-bottom: 10px;
-    background: #e9eff6;
-    line-height: 40px;
-    border-width: 0;
-    border-radius: 2px;
-    margin-top: 10px;
-    background-color: #159262;
-    min-width: 105px;
-    width: 20%;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.3s;
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #e9eff6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 2px;
+  margin-top: 10px;
+  background-color: #159262;
+  min-width: 105px;
+  width: 20%;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 input[name="username"] {
-    text-align: center;
-    display: block;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 120px;
-    width: 50%;
-    padding: 0 20px;
-    background: #e9eff6;
-    line-height: 40px;
-    border-width: 0;
-    border-radius: 2px;
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 120px;
+  width: 50%;
+  padding: 0 20px;
+  background: #e9eff6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 2px;
 }
 
 /* USER */
 
 .user {
-    color: #fff;
-    width: 100%;
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
+  color: #fff;
+  width: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .user-info {
-    margin: 0 auto;
-    width: 50%;
+  margin: 0 auto;
+  width: 50%;
 }
 
 .user-avatar {
-    display: block;
-    margin: 0px auto;
-    margin-bottom: 5px;
-    margin-top: 30px;
-    border-radius: 50%;
+  animation: ggman;
+  display: block;
+  margin: 0px auto;
+  margin-bottom: 5px;
+  margin-top: 30px;
+  border-radius: 50%;
+}
+
+@keyframes ggman {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    transition: all ease 0.5s;
+  }
 }
 
 .username {
@@ -85,18 +96,18 @@ input[name="username"] {
 /* REPOS */
 
 .repo-name {
-    text-align: center;
-    display: block;
-    margin: 10px auto;
-    margin-top: 15px;
-    min-height: 50px;
-    line-height: 50px;
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: bold;
-    background-color: #159262;
-    color: #fff;
-    transition: .2s;
+  text-align: center;
+  display: block;
+  margin: 10px auto;
+  margin-top: 15px;
+  min-height: 50px;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #159262;
+  color: #fff;
+  transition: 0.2s;
 }
 
 .repo-name:hover {
@@ -104,12 +115,13 @@ input[name="username"] {
 }
 
 .repo-row {
-    background-color: #2f7c5e;
-    margin: 0 auto;
-    color: #fff;
-    margin-bottom: 25px;
-    padding: 10px;
-    padding-top: 0.1px;
+  word-wrap: break-word;
+  background-color: #2f7c5e;
+  margin: 0 auto;
+  color: #fff;
+  margin-bottom: 25px;
+  padding: 10px;
+  padding-top: 0.1px;
 }
 
 .repo-desription {
@@ -124,16 +136,12 @@ input[name="username"] {
   font-weight: bold;
 }
 
-
-
 /* ERROR */
 
 .error {
-    font-weight: bold;
-    font-size: 3vw;
-    margin-top: 100px;
-    text-align: center;
-    color: #fff;
+  font-weight: bold;
+  font-size: 3vw;
+  margin-top: 100px;
+  text-align: center;
+  color: #fff;
 }
-
-

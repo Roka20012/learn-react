@@ -1,0 +1,46 @@
+body {
+  font-family: Helvetica Neue, Segoe;
+}
+
+.repos-container {
+  position: relative;
+  margin: 0 auto;
+  width: 500px;
+}
+
+.repos-container input {
+  font-size: 20px;
+  padding: 10px;
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.repos-container button {
+  font-size: 20px;
+  padding: 10px;
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0.28);
+}
+
+.repos-container button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.38);
+}
+
+.repo-row {
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.repo-row:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.repo-name a {
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.repo-name a:hover {
+  text-decoration: underline;
+}

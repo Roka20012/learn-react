@@ -1,13 +1,11 @@
 import React from "react";
 import "./App.css";
-import GetUserRepos from './components/GetUserRepos';
+import UserRepos from "./components/UserRepos";
 
 class App extends React.Component {
-    render() {
-        return (
-            <GetUserRepos />
-        );
-    }
+  render() {
+    return <UserRepos />;
+  }
 }
 
 export default App;
