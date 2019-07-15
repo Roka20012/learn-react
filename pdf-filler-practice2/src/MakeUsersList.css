@@ -1,0 +1,8 @@
+.deleteItem {
+    display: none;
+}
+
+.deleteItem:hover {
+    color: red;
+    display: block;
+}
