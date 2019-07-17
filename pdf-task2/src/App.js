@@ -14,8 +14,7 @@ class App extends React.Component {
         super(props);
         this.state = {
             inputValue: "",
-            alerts: [],
-            alert: ""
+            alerts: []
         };
         this.textInput = React.createRef();
     }
